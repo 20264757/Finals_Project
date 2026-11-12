@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CareCircle – You're not alone in this</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-nav="" data-page="home">
+<main id="main">
+<section class="hero"><div class="wrap">
+  <div>
+    <p class="small"><strong>A community that understands</strong></p>
+    <h1>You're not alone in this</h1>
+    <p class="muted">Living with a rare or chronic illness can feel isolating. Find people who get it, share what helps, and take the next step together.</p>
+    <p class="row" style="justify-content:flex-start"><a class="btn" href="forums.html">Find your community</a><a class="btn secondary" href="signup.html">Join CareCircle</a></p>
+    <p class="small">Free to join. Moderated with care.</p>
+  </div>
+  <div class="hero-art" role="img" aria-label="Illustration placeholder: a supportive group conversation"><blockquote>"It helps to be understood."<br><span class="small">Different experiences. A shared sense of belonging.</span></blockquote></div>
+</div></section>
+<section class="section"><div class="wrap">
+  <h2>A little connection. At your pace.</h2>
+  <ol class="steps" style="list-style:none;padding:0">
+    <li><h3>Find your people</h3><p class="muted">Explore communities for your condition or the things you're navigating.</p></li>
+    <li><h3>Make yourself at home</h3><p class="muted">Choose a username. Read, listen or introduce yourself when you're ready.</p></li>
+    <li><h3>Share the journey</h3><p class="muted">Ask questions, exchange experiences and celebrate the small wins.</p></li>
+  </ol>
+</div></section>
+<section class="section tint"><div class="wrap">
+  <div class="row"><div><h2>Find a circle that feels like yours</h2><p class="muted">Start with a shared experience. Discover a world of support.</p></div><a href="forums.html"><strong>View all forums</strong></a></div>
+  <div class="grid four" id="featured"></div>
+  <div class="card" style="margin-top:2rem;background:var(--pale)"><div class="row"><div style="flex:1 1 280px"><h2>A safe space, held with care</h2><p class="muted">Real people look after this community. Our moderators and patient advocates help keep conversations respectful, supportive and free from judgment.</p></div>
+  <div style="flex:1 1 280px"><ul><li>Your privacy comes first. Share only what feels right.</li><li>Kindness is the rule, not the exception.</li><li>Lived experience matters. Medical decisions stay with your care team.</li></ul><a class="btn secondary" href="guidelines.html">Read our community guidelines</a></div></div></div>
+</div></section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/pages.js"></script>
+<script>
+document.getElementById('featured').innerHTML = CC.forums().slice(0,4).map(function(f){
+  return '<a class="card community-card" href="forum.html?id='+CC.esc(f.id)+'"><span class="icon-tile" aria-hidden="true">'+CC.esc(f.name[0])+'</span><h3>'+CC.esc(f.name)+'</h3><span class="chip">'+CC.esc(f.cat)+'</span><p style="margin:.75rem 0 0"><strong>'+f.members.toLocaleString()+' members</strong><br><span class="small">Active '+CC.ago(f.active)+'</span></p></a>';
+}).join('');
+</script>
+</body></html>

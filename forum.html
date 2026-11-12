@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forum – CareCircle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-nav="forums" data-page="forum">
+<main id="main"><div class="wrap">
+  <div class="page-head">
+    <p class="crumbs" id="crumb"></p>
+    <div class="row"><div><h1 id="fname"></h1><p class="muted" id="fdesc" style="margin:0"></p><p class="small" id="fmeta"></p></div><a class="btn" id="newpost" href="new-post.html">+ New post</a></div>
+  </div>
+  <p class="banner">Share experiences, not prescriptions. This space supports you; it doesn't replace your care team.</p>
+  <div class="with-side" style="margin-top:1rem">
+    <section aria-label="Conversations">
+      <div class="tabs" id="tabs" role="group" aria-label="Sort conversations">
+        <button type="button" data-tab="latest" aria-selected="true">Latest</button>
+        <button type="button" data-tab="popular" aria-selected="false">Popular</button>
+        <button type="button" data-tab="unanswered" aria-selected="false">Unanswered</button>
+      </div>
+      <p class="small" id="tcount" role="status"></p>
+      <div class="stack" id="threads"></div>
+    </section>
+    <aside class="stack" aria-label="Community information">
+      <div class="card"><h2 style="font-size:1.25rem">A circle for every kind of day</h2><p class="muted">From newly diagnosed to years into your journey, you're welcome here. Read quietly, ask a question or share what you've learned.</p>
+        <p class="small"><strong>Our community agreements</strong></p><ul class="small"><li>Be kind. Every experience is different.</li><li>Protect your own and others' privacy.</li><li>Report anything that doesn't feel safe.</li></ul><a href="guidelines.html">Read all guidelines</a></div>
+      <div class="card"><h2 style="font-size:1.25rem">Here to help</h2><p class="muted">Need a hand finding your way? Our moderation team is here to listen.</p><a class="btn secondary" href="contact.html">Contact the team</a></div>
+    </aside>
+  </div>
+</div></main>
+<script src="js/data.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/pages.js"></script>
+</body></html>
