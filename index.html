@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body data-nav="" data-page="home">
 <main id="main">
@@ -36,9 +36,9 @@
   <div style="flex:1 1 280px"><ul><li>Your privacy comes first. Share only what feels right.</li><li>Kindness is the rule, not the exception.</li><li>Lived experience matters. Medical decisions stay with your care team.</li></ul><a class="btn secondary" href="guidelines.html">Read our community guidelines</a></div></div></div>
 </div></section>
 </main>
-<script src="js/data.js"></script>
-<script src="js/layout.js"></script>
-<script src="js/pages.js"></script>
+<script src="data.js"></script>
+<script src="layout.js"></script>
+<script src="pages.js"></script>
 <script>
 document.getElementById('featured').innerHTML = CC.forums().slice(0,4).map(function(f){
   return '<a class="card community-card" href="forum.html?id='+CC.esc(f.id)+'"><span class="icon-tile" aria-hidden="true">'+CC.esc(f.name[0])+'</span><h3>'+CC.esc(f.name)+'</h3><span class="chip">'+CC.esc(f.cat)+'</span><p style="margin:.75rem 0 0"><strong>'+f.members.toLocaleString()+' members</strong><br><span class="small">Active '+CC.ago(f.active)+'</span></p></a>';
