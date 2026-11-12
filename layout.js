@@ -21,7 +21,8 @@
     '<nav aria-label="Footer"><a href="guidelines.html">Community guidelines</a><a href="privacy.html">Privacy</a><a href="accessibility.html">Accessibility</a><a href="contact.html">Contact</a></nav></div>' +
     '<hr style="border:0;border-top:1px solid var(--line);margin:1rem 0">' +
     '<p class="small">Peer support, not medical advice. If you need urgent help, contact your local emergency services.</p>' +
-    '<p class="small">\u00a9 2026 CareCircle. All names and discussions shown are fictional. <button class="btn secondary sm" id="reset" type="button">Reset demo data</button></p></div></footer>';
+    '<p class="small">\u00a9 2026 CareCircle. All names and discussions shown are fictional. <button class="btn secondary sm" id="reset" type="button">Reset demo data</button></p>' +
+    '<p class="small">Made by Kenshee Dampilag For Finals Project</p></div></footer>';
 
   document.body.insertAdjacentHTML('afterbegin', header);
   document.body.insertAdjacentHTML('beforeend', footer);
