@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start a conversation – CareCircle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-nav="forums" data-page="new-post">
+<main id="main"><div class="wrap">
+  <div class="page-head"><p class="crumbs"><a href="forums.html">Forums</a> / Create post</p><h1>Start a conversation</h1><p class="muted">A question, a small win or a difficult day. There's room for your experience here.</p></div>
+  <div class="with-side">
+    <form class="card" id="postform" novalidate>
+      <label for="title">Post title</label>
+      <input id="title" type="text" maxlength="120" placeholder="What helps you make room for rest without feeling guilty?" aria-describedby="thelp">
+      <p class="field-error" id="terr" hidden></p><p class="help" id="thelp">Choose a clear title so others can find your conversation.</p>
+      <label for="forum">Forum</label><select id="forum"></select><p class="help">Choose the community that best fits your post.</p>
+      <label for="body">Your post</label>
+      <textarea id="body" style="min-height:220px" aria-describedby="bhelp"></textarea>
+      <p class="field-error" id="berr" hidden></p>
+      <p class="help" id="bhelp">Share your own experience. <span id="wc" role="status"></span></p>
+      <div class="label" id="taglabel">Tags</div>
+      <div class="tag-row" aria-labelledby="taglabel"><span id="taglist" class="tag-row"></span>
+        <input id="taginput" type="text" maxlength="24" style="width:10rem" aria-label="New tag"><button type="button" class="btn secondary sm" id="addtag">Add tag</button></div>
+      <p class="help">Add up to 3 tags to help the right people find your post.</p>
+      <div class="switch-row"><div><label for="warn">Trigger warning</label><span class="small">Let readers know if your post includes potentially distressing content.</span></div><span class="switch"><input type="checkbox" id="warn" role="switch"></span></div>
+      <div class="switch-row"><div><label for="anon">Post anonymously</label><span class="small">Your username won't be shown. Moderators can still review your post.</span></div><span class="switch"><input type="checkbox" id="anon" role="switch"></span></div>
+      <p class="banner">Avoid sharing identifying or medical record details.</p>
+      <p class="small">By posting, you agree to our community guidelines. Share personal experiences, not medical advice.</p>
+      <div class="row"><a class="btn secondary" id="back" href="forums.html">Cancel</a><span class="row"><button class="btn secondary" type="button" id="savedraft">Save draft</button><button class="btn" type="submit">Publish post</button></span></div>
+    </form>
+    <aside class="stack"><div class="card"><h2 style="font-size:1.25rem">A little care goes a long way</h2><p class="muted">There's no perfect way to start. Write as you would to someone who understands.</p><ul class="small"><li>Be kind. Every experience is different.</li><li>Speak from your own experience.</li><li>Keep names, locations and records private.</li><li>Leave medical decisions to your care team.</li></ul><a href="guidelines.html">Read all guidelines</a></div></aside>
+  </div>
+</div></main>
+<script src="js/data.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/pages.js"></script>
+</body></html>

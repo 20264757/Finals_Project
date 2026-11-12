@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discussion – CareCircle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-nav="forums" data-page="thread">
+<main id="main"><div class="wrap">
+  <div class="page-head"><p class="crumbs" id="crumb"></p><div id="ttags"></div><h1 id="ttitle" style="margin-top:.75rem"></h1><p class="small" id="tmeta"></p></div>
+  <p class="banner">Share experiences, not prescriptions. This space supports you; it doesn't replace your care team.</p>
+  <div class="with-side" style="margin-top:1rem">
+    <div class="stack">
+      <div id="original"></div>
+      <h2 id="rcount" style="font-size:1.25rem;margin-top:1.5rem"></h2>
+      <div class="stack" id="replies"></div>
+      <form class="card" id="replyform" novalidate>
+        <h2 style="font-size:1.25rem">Add your voice</h2>
+        <label for="replytext">Your reply</label>
+        <textarea id="replytext" placeholder="Share your experience or a few words of support..." aria-describedby="replyhelp"></textarea>
+        <p class="field-error" id="replyerr" hidden></p>
+        <p class="help" id="replyhelp">Avoid sharing identifying or medical record details.</p>
+        <div class="row"><span class="small">You'll be asked for a username the first time.</span><button class="btn" type="submit">Post reply</button></div>
+      </form>
+    </div>
+    <aside class="stack" aria-label="Related">
+      <div class="card"><h2 style="font-size:1.25rem">In the <span id="fside"></span> circle</h2><p class="muted" id="fsideinfo"></p><a class="btn secondary" id="back" href="forums.html">Back to forum</a></div>
+      <h2 style="font-size:1.25rem">Related threads</h2>
+      <div class="stack" id="related"></div>
+      <div class="card" style="background:var(--pale)"><h3>Held with care</h3><p class="small" style="color:var(--text)">If a post doesn't feel safe, use Report. Our moderation team reviews concerns privately.</p><a class="btn secondary sm" href="guidelines.html">Community guidelines</a></div>
+    </aside>
+  </div>
+</div></main>
+<dialog id="reportdlg" aria-labelledby="rtitle">
+  <div id="rstep1"><h2 id="rtitle">Report a concern</h2><p class="muted">Your report is shared only with the moderation team.</p>
+    <label for="reason">What is your concern?</label>
+    <select id="reason"><option value="">Choose a reason</option><option>Medical misinformation</option><option>Promotional content</option><option>Unkind or disrespectful</option><option>Shares private information</option><option>Something else</option></select>
+    <p class="field-error" id="rerr" hidden></p>
+    <label for="rdetail" style="margin-top:1rem">Tell us a little more (optional)</label>
+    <textarea id="rdetail" style="min-height:100px"></textarea>
+    <p class="help">Avoid including private health or contact details. Reports are not monitored for emergencies.</p>
+    <div class="row" style="justify-content:flex-end"><button class="btn secondary" type="button" id="rcancel">Cancel</button><button class="btn" type="button" id="rsend">Submit report</button></div></div>
+  <div id="rstep2" hidden><button class="btn secondary sm" type="button" id="rclose" aria-label="Close" style="float:right">\u00d7</button>
+    <h2>Thank you for speaking up</h2><p>Your report has been sent to our moderation team. Helping us notice concerns makes CareCircle safer for everyone.</p>
+    <div class="banner" style="display:block"><strong>What happens next?</strong><p style="margin:.5rem 0 0">We'll review the post against our community guidelines. Your identity won't be shared with the person you reported.</p><p style="margin:.5rem 0 0">You don't need to reply or take any further action.</p></div>
+    <p class="small" style="margin-top:1rem">Reports are not monitored for emergencies. If you or someone else is in immediate danger, contact local emergency services now.</p>
+    <button class="btn" type="button" id="rback" style="width:100%">Back to the conversation</button></div>
+</dialog>
+<script src="js/data.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/pages.js"></script>
+</body></html>
